@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es" class="lang-es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto – YDM Auto Glass</title>
+  <meta name="description" content="Cotiza tu vidrio automotriz. Llama 979-733-1769 o 346-245-9543. Servicio en Hempstead y Greater Houston.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span>YDM Auto Glass</span></a>
+    <nav class="nav">
+      <a href="index.html">Inicio<span class="en">Home</span></a>
+      <a href="services.html">Servicios<span class="en">Services</span></a>
+      <a href="contact.html" class="active">Contacto<span class="en">Contact</span></a>
+    </nav>
+    <button id="langSwitch" class="lang-btn">ES / EN</button>
+  </header>
+
+  <main class="section contact">
+    <h1 class="es">Contacto</h1>
+    <h1 class="en">Contact</h1>
+
+    <div class="contact-grid">
+      <div class="contact-card card">
+        <h3 class="es">Llámanos</h3><h3 class="en">Call us</h3>
+        <p><a href="tel:+19797331769">979-733-1769</a><br><a href="tel:+13462459543">346-245-9543</a></p>
+        <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
+        <p><a class="btn whats" href="https://wa.me/19797331769" target="_blank" rel="noopener">WhatsApp</a></p>
+
+        <h4 class="es">Horario</h4><h4 class="en">Hours</h4>
+        <p class="es">Lun–Sáb 8:00–6:00 · Dom Cerrado</p>
+        <p class="en">Mon–Sat 8:00–6:00 · Sun Closed</p>
+
+        <h4 class="es">Área de servicio</h4><h4 class="en">Service area</h4>
+        <p class="es">Hempstead y todo Greater Houston</p>
+        <p class="en">Hempstead & Greater Houston</p>
+      </div>
+
+      <div class="map card">
+        <iframe
+          title="Mapa de servicio"
+          src="https://www.google.com/maps?q=Hempstead,TX&z=10&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="form card">
+        <h3 class="es">Pide tu cotización</h3><h3 class="en">Request a quote</h3>
+        <!-- Replace action with your Formspree/Web3Forms endpoint -->
+        <form method="POST" action="#" onsubmit="alert('Form endpoint pendiente. Usa Formspree/Web3Forms.'); return false;">
+          <label class="es">Nombre</label><label class="en">Name</label>
+          <input type="text" name="name" required>
+
+          <label class="es">Teléfono</label><label class="en">Phone</label>
+          <input type="tel" name="phone" required>
+
+          <label class="es">Mensaje</label><label class="en">Message</label>
+          <textarea name="message" rows="4" required></textarea>
+
+          <button class="btn primary" type="submit"><span class="es">Enviar</span><span class="en">Send</span></button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="tiny">© <span id="year"></span> YDM Auto Glass</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
