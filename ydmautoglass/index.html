@@ -1,139 +1,412 @@
-<!doctype html>
-<html lang="es" class="lang-es">
+<!DOCTYPE html>
+<html class="lang-en" lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YDM Auto Glass – Vidrios automotrices a domicilio en Greater Houston</title>
-  <meta name="description" content="Reparación y reemplazo de vidrios automotrices a domicilio. Hempstead y todo Greater Houston. Llama al 979-733-1769 o 346-245-9543. Hablamos español." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="YDM Auto Glass – Mobile Auto Glass in Greater Houston" />
-  <meta property="og:description" content="Mobile auto glass repair & replacement. Hempstead & Greater Houston. Call 979-733-1769 or 346-245-9543." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og.jpg" />
-
-  <!-- LocalBusiness JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"YDM Auto Glass",
-    "image":"https://example.com/assets/og.jpg",
-    "telephone":"+1-979-733-1769",
-    "email":"ydmautoglass@yahoo.com",
-    "areaServed":["Hempstead TX","Greater Houston"],
-    "address":{"@type":"PostalAddress","addressLocality":"Hempstead","addressRegion":"TX","addressCountry":"US"},
-    "url":"https://example.com",
-    "sameAs":[],
-    "openingHoursSpecification":[
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}
-    ]
-  }
-  </script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>YDM Auto Glass – Mobile Auto Glass Repair & Replacement | Houston</title>
+  <meta name="description" content="Expert mobile auto glass repair and replacement for cars, trucks, and RVs across Greater Houston. Same-day service, 25+ years experience."/>
+  
+  <!-- Fonts - Optimized Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet"></noscript>
+  
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+  <!-- Announcement Bar -->
+  <div class="notice-bar">
+    <p>
+      <span class="es">📅 Atendemos servicio el mismo día en Houston. Llama al</span>
+      <span class="en">📅 Now booking same-day service in Houston. Call</span>
+      <a href="tel:+19797331769">979-733-1769</a>
+    </p>
+  </div>
+
+  <!-- Header -->
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.svg" alt="YDM Auto Glass logo" />
+    <a class="brand" href="./">
+      <img alt="YDM Auto Glass logo" decoding="async" height="120" src="assets/logo/logo-blue.svg" width="120"/>
       <span>YDM Auto Glass</span>
     </a>
     <nav class="nav">
-      <a href="index.html" class="active">Inicio<span class="en">Home</span></a>
-      <a href="services.html">Servicios<span class="en">Services</span></a>
-      <a href="contact.html">Contacto<span class="en">Contact</span></a>
+      <a href="./"><span class="es">Inicio</span><span class="en">Home</span></a>
+      <a href="services.html"><span class="es">Servicios</span><span class="en">Services</span></a>
+      <a href="contact.html"><span class="es">Contacto</span><span class="en">Contact</span></a>
     </nav>
-    <button id="langSwitch" class="lang-btn" aria-label="Cambiar idioma">ES / EN</button>
+    <button aria-label="Change language" class="lang-btn" id="langSwitch">ES / EN</button>
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- Full-Screen Hero -->
     <section class="hero">
-      <div class="hero-content">
-        <h1 class="es">Reparación y reemplazo de vidrios automotrices a domicilio</h1>
-        <h1 class="en">Mobile auto glass repair & replacement</h1>
-        <p class="muted es">Hempstead y todo Greater Houston. Trabajo limpio y profesional. Hablamos español.</p>
-        <p class="muted en">Hempstead & Greater Houston. Clean, professional work. Se habla español.</p>
-
-        <div class="cta-row">
-          <a class="btn primary" href="tel:+19797331769">Llamar 979-733-1769</a>
-          <a class="btn outline" href="tel:+13462459543">Llamar 346-245-9543</a>
-          <a class="btn whats" href="https://wa.me/19797331769" target="_blank" rel="noopener">WhatsApp</a>
+      <div class="container">
+        <div class="wrap">
+          <div class="panel reveal">
+            <h1>
+              <span class="es">Reparación de Vidrios Móvil el Mismo Día | Cotizaciones Gratis</span>
+              <span class="en">Same-Day Mobile Glass Repair | Free Estimates | Houston</span>
+            </h1>
+            <p class="muted">
+              <span class="es">Llegamos a ti — servicio profesional de reparación y reemplazo de vidrios para autos, camiones y RV en Greater Houston. 25+ años de experiencia.</span>
+              <span class="en">We come to you — expert mobile auto glass repair and replacement for cars, trucks, and RVs across Greater Houston. 25+ years experience.</span>
+            </p>
+            <ul class="hero-points">
+              <li><span class="es">25+ años de experiencia</span><span class="en">25+ years of experience</span></li>
+              <li><span class="es">Servicio el mismo día cuando es posible</span><span class="en">Same-day service when possible</span></li>
+              <li><span class="es">Trabajo limpio y garantizado</span><span class="en">Clean, guaranteed work</span></li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn primary" href="https://wa.me/19797331769?text=Hola%20YDM%2C%20necesito%20una%20cotizaci%C3%B3n%20para%3A%20%5Ba%C3%B1o%2Fmarca%2Fmodelo%5D%2C%20%5Bvidrio%5D%2C%20ZIP%3A%20____.%20(EN%3A%20Quote%20for%3A%20%5Byear%2Fmake%2Fmodel%5D%2C%20%5Bglass%5D%2C%20ZIP%3A%20____)" rel="noopener" target="_blank">
+                <span class="es">💬 Cotización Gratis por WhatsApp</span><span class="en">💬 Get Free Quote on WhatsApp</span>
+              </a>
+              <a class="btn outline" href="tel:+19797331769">
+                <span class="es">📞 Llamar Ahora</span><span class="en">📞 Call Now</span>
+              </a>
+              <a class="btn outline" href="contact.html">
+                <span class="es">📝 Formulario</span><span class="en">📝 Request Quote</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <picture>
-        <img src="assets/hero.webp" alt="Cambio de parabrisas a domicilio" loading="eager" />
-      </picture>
     </section>
 
-    <!-- TRUST STRIP -->
-    <section class="strip">
-      <ul class="pill-row">
-        <li class="es">Servicio móvil o en tu ubicación</li>
-        <li class="en">Mobile service to your location</li>
-        <li class="es">Autos · Camiones · RV · Laminados</li>
-        <li class="en">Cars · Trucks · RV · Laminated</li>
-        <li>Hempstead · Greater Houston</li>
-      </ul>
+    <!-- Trust Badges -->
+    <section class="section" style="padding: var(--space-xl) 0; background: var(--bg-secondary);">
+      <div class="container">
+        <div class="trust-badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xl); align-items: center;">
+          <div class="trust-badge" style="text-align: center;">
+            <div style="font-size: 2rem; font-weight: 700; color: var(--brand-primary);">25+</div>
+            <div style="font-size: var(--text-sm); color: var(--text-secondary);"><span class="es">Años de Experiencia</span><span class="en">Years Experience</span></div>
+          </div>
+          <div class="trust-badge" style="text-align: center;">
+            <div style="font-size: 2rem; font-weight: 700; color: var(--brand-primary);">✓</div>
+            <div style="font-size: var(--text-sm); color: var(--text-secondary);"><span class="es">Licenciado e Asegurado</span><span class="en">Licensed & Insured</span></div>
+          </div>
+          <div class="trust-badge" style="text-align: center;">
+            <div style="font-size: 2rem; font-weight: 700; color: var(--brand-primary);">📅</div>
+            <div style="font-size: var(--text-sm); color: var(--text-secondary);"><span class="es">Servicio el Mismo Día</span><span class="en">Same-Day Service</span></div>
+          </div>
+          <div class="trust-badge" style="text-align: center;">
+            <div style="font-size: 2rem; font-weight: 700; color: var(--brand-primary);">✓</div>
+            <div style="font-size: var(--text-sm); color: var(--text-secondary);"><span class="es">Aceptamos Seguros</span><span class="en">Insurance Accepted</span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- SERVICES PREVIEW -->
-    <section class="grid section">
-      <article class="card">
-        <h3 class="es">Parabrisas y vidrios de auto</h3>
-        <h3 class="en">Windshields & auto glass</h3>
-        <p class="es">Reemplazo y reparación con materiales de calidad.</p>
-        <p class="en">Quality replacement and repairs.</p>
-      </article>
-      <article class="card">
-        <h3 class="es">Camiones y flotillas</h3>
-        <h3 class="en">Trucks & fleets</h3>
-        <p class="es">Servicio en sitio para mantener tus unidades trabajando.</p>
-        <p class="en">On-site service to keep units working.</p>
-      </article>
-      <article class="card">
-        <h3 class="es">RV / Casas rodantes</h3>
-        <h3 class="en">RVs / Motorhomes</h3>
-        <p class="es">Instalación cuidada y sellado correcto.</p>
-        <p class="en">Careful install and proper sealing.</p>
-      </article>
-      <article class="card">
-        <h3 class="es">Vidrios laminados</h3>
-        <h3 class="en">Laminated glass</h3>
-        <p class="es">Corte e instalación de laminado a medida.</p>
-        <p class="en">Custom-cut laminated glass installs.</p>
-      </article>
+    <!-- Why Choose Us -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">¿Por qué elegirnos?</span>
+          <span class="en">Why choose us</span>
+        </h2>
+        <div class="grid-3">
+          <div class="card reveal">
+            <h3>🧼 <span class="es">Trabajo garantizado</span><span class="en">Guaranteed Work</span></h3>
+            <p><span class="es">Cuidamos tu vehículo — sin fugas, sin sorpresas. Garantía 100% de satisfacción.</span><span class="en">We treat your vehicle right — no leaks, no surprises. 100% satisfaction guarantee.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3>⚡ <span class="es">Servicio rápido</span><span class="en">Fast Service</span></h3>
+            <p><span class="es">Mismo día cuando es posible. Llegamos a ti — no necesitas salir de casa.</span><span class="en">Same-day when possible. We come to you — no need to leave home.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3>🏆 <span class="es">Experiencia probada</span><span class="en">Proven Experience</span></h3>
+            <p><span class="es">25+ años sirviendo Greater Houston con excelencia. La mayoría de clientes llegan por recomendación.</span><span class="en">25+ years serving Greater Houston with excellence. Most customers come from referrals.</span></p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section center">
-      <a class="btn primary" href="services.html"><span class="es">Ver servicios</span><span class="en">See services</span></a>
-      <a class="btn outline" href="contact.html"><span class="es">Pedir cotización</span><span class="en">Get a quote</span></a>
+    <!-- Featured Services -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">Nuestros servicios</span>
+          <span class="en">Our services</span>
+        </h2>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <img alt="Technician replacing a car windshield" height="400" loading="lazy" src="assets/images/img-20240613-wa0006-mk3DW46kLbseE2ba.avif" width="600"/>
+            <div class="feature-overlay"></div>
+            <div class="feature-content">
+              <h3><span class="es">Autos</span><span class="en">Cars</span></h3>
+              <p><span class="es">Parabrisas y cristales con sellado limpio.</span><span class="en">Windshields &amp; side glass with clean seals.</span></p>
+              <a class="btn" href="services.html"><span class="es">Ver servicios</span><span class="en">View services</span></a>
+            </div>
+          </div>
+          <div class="feature-card reveal">
+            <img alt="Fleet trucks receiving glass service" height="400" loading="lazy" src="assets/images/img-20240613-wa0008-m2W43qnLlPCDZkr5.avif" width="600"/>
+            <div class="feature-overlay"></div>
+            <div class="feature-content">
+              <h3><span class="es">Camiones</span><span class="en">Trucks</span></h3>
+              <p><span class="es">Servicio para flotas y vehículos comerciales.</span><span class="en">Fleet and commercial vehicle service.</span></p>
+              <a class="btn" href="services.html"><span class="es">Ver servicios</span><span class="en">View services</span></a>
+            </div>
+          </div>
+          <div class="feature-card reveal">
+            <img alt="RV windshield replacement" height="400" loading="lazy" src="assets/images/img-20240621-wa0002-YKbJ48j40Pt1nyWR.avif" width="600"/>
+            <div class="feature-overlay"></div>
+            <div class="feature-content">
+              <h3><span class="es">RV / Casas rodantes</span><span class="en">RVs / Motorhomes</span></h3>
+              <p><span class="es">Instalación cuidadosa y sellado resistente.</span><span class="en">Careful install with weather-resistant sealing.</span></p>
+              <a class="btn" href="services.html"><span class="es">Ver servicios</span><span class="en">View services</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Gallery -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">Nuestro trabajo</span>
+          <span class="en">Our work</span>
+        </h2>
+        <div class="gallery">
+          <div class="gallery-item reveal">
+            <img alt="Auto glass replacement job" height="300" loading="lazy" src="assets/images/img-20240613-wa0003-mnl3w48M22tgjR07.avif" width="400"/>
+          </div>
+          <div class="gallery-item reveal">
+            <img alt="Windshield repair work" height="300" loading="lazy" src="assets/images/img-20240613-wa0004-mv0jGPBq4ZhEVzoV.avif" width="400"/>
+          </div>
+          <div class="gallery-item reveal">
+            <img alt="RV glass service" height="300" loading="lazy" src="assets/images/img-20240613-wa0015-AzGroMLQk1UJLlDg.avif" width="400"/>
+          </div>
+          <div class="gallery-item reveal">
+            <img alt="Truck windshield replacement" height="300" loading="lazy" src="assets/images/img-20240613-wa0017-YZ923EZeWRSKoybl.avif" width="400"/>
+          </div>
+          <div class="gallery-item reveal">
+            <img alt="Commercial vehicle glass" height="300" loading="lazy" src="assets/images/img-20240620-wa0006-d95pLZqRkVfKEGOj.avif" width="400"/>
+          </div>
+          <div class="gallery-item reveal">
+            <img alt="Finished glass installation" height="300" loading="lazy" src="assets/images/img-20240620-wa0010-mePL7gE7eDsk5Zb8.avif" width="400"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">Cómo trabajamos</span>
+          <span class="en">How we work</span>
+        </h2>
+        <div class="grid-3">
+          <figure class="card reveal">
+            <div class="thumb">
+              <img alt="Cracked / damaged glass close-up" height="300" loading="lazy" src="assets/images/img-20240613-wa0004-mv0jGPBq4ZhEVzoV.avif" width="400"/>
+            </div>
+            <figcaption>
+              <h3><span class="es">1. Evaluación</span><span class="en">1. Assessment</span></h3>
+              <p><span class="es">Revisamos el daño y te damos una cotización clara.</span><span class="en">We assess the damage and give you a clear quote.</span></p>
+            </figcaption>
+          </figure>
+          <figure class="card reveal">
+            <div class="thumb">
+              <img alt="Tools and prep for windshield replacement" height="300" loading="lazy" src="assets/images/photo-1473289495063-6d095b0302a9.avif" width="400"/>
+            </div>
+            <figcaption>
+              <h3><span class="es">2. Preparación</span><span class="en">2. Preparation</span></h3>
+              <p><span class="es">Preparamos el área y protegemos tu vehículo.</span><span class="en">We prep the area and protect your vehicle.</span></p>
+            </figcaption>
+          </figure>
+          <figure class="card reveal">
+            <div class="thumb">
+              <img alt="Clean finished windshield install" height="300" loading="lazy" src="assets/images/img-20240620-wa0010-mePL7gE7eDsk5Zb8.avif" width="400"/>
+            </div>
+            <figcaption>
+              <h3><span class="es">3. Instalación</span><span class="en">3. Installation</span></h3>
+              <p><span class="es">Trabajo profesional con sellado perfecto.</span><span class="en">Professional work with perfect sealing.</span></p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testis section-alt">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">Lo que dicen los clientes</span>
+          <span class="en">What customers say</span>
+        </h2>
+        <div class="testi-grid">
+          <div class="testi reveal">
+            <p><span class="es">"Vino a mi casa y cambió el parabrisas en menos de una hora. Trabajo limpio."</span><span class="en">"He came to my driveway and replaced my windshield in under an hour. Super clean job."</span></p>
+            <div class="stars">★★★★★</div>
+            <p>— Maria G.</p>
+          </div>
+          <div class="testi reveal">
+            <p><span class="es">"Rápido, confiable y precio justo. Lo usamos para nuestros camiones."</span><span class="en">"Fast, reliable, and fair price. We use him for our trucks."</span></p>
+            <div class="stars">★★★★★</div>
+            <p>— Hector L.</p>
+          </div>
+          <div class="testi reveal">
+            <p><span class="es">"Trabajo garantizado y muy profesional. 100% recomendado."</span><span class="en">"Guaranteed work and very professional. 100% recommend."</span></p>
+            <div class="stars">★★★★★</div>
+            <p>— Ashley R.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commercial Services -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">Servicios Comerciales y Flotas</span>
+          <span class="en">Commercial & Fleet Services</span>
+        </h2>
+        <div class="grid-2" style="max-width: 1000px; margin: 0 auto;">
+          <div class="card reveal">
+            <h3><span class="es">🚛 Servicio para Flotas</span><span class="en">🚛 Fleet Service</span></h3>
+            <p><span class="es">Mantenemos tus vehículos comerciales en la carretera. Descuentos por volumen, facturación directa, y servicio programado disponible.</span><span class="en">Keep your commercial vehicles on the road. Volume discounts, direct billing, and scheduled service available.</span></p>
+            <ul style="margin-top: var(--space-md); padding-left: var(--space-lg);">
+              <li><span class="es">Descuentos por volumen</span><span class="en">Volume discounts</span></li>
+              <li><span class="es">Facturación directa</span><span class="en">Direct billing</span></li>
+              <li><span class="es">Servicio programado</span><span class="en">Scheduled service</span></li>
+              <li><span class="es">Respuesta rápida para emergencias</span><span class="en">Fast emergency response</span></li>
+            </ul>
+            <a class="btn primary" href="contact.html" style="margin-top: var(--space-md);">
+              <span class="es">Cotización para Flota</span><span class="en">Get Fleet Quote</span>
+            </a>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">🏢 Clientes Comerciales</span><span class="en">🏢 Commercial Clients</span></h3>
+            <p><span class="es">Servicio confiable para empresas, talleres de carrocería, y concesionarios. Trabajamos con tu horario y presupuesto.</span><span class="en">Reliable service for businesses, body shops, and dealerships. We work with your schedule and budget.</span></p>
+            <ul style="margin-top: var(--space-md); padding-left: var(--space-lg);">
+              <li><span class="es">Precios competitivos</span><span class="en">Competitive pricing</span></li>
+              <li><span class="es">Horarios flexibles</span><span class="en">Flexible scheduling</span></li>
+              <li><span class="es">Garantía en todo el trabajo</span><span class="en">Warranty on all work</span></li>
+              <li><span class="es">Soporte para seguros</span><span class="en">Insurance support</span></li>
+            </ul>
+            <a class="btn primary" href="contact.html" style="margin-top: var(--space-md);">
+              <span class="es">Contacto Comercial</span><span class="en">Commercial Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center reveal">
+          <span class="es">Preguntas Frecuentes</span>
+          <span class="en">Frequently Asked Questions</span>
+        </h2>
+        <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: grid; gap: var(--space-md);">
+          <div class="card reveal">
+            <h3><span class="es">¿Cuánto tiempo toma el servicio?</span><span class="en">How long does service take?</span></h3>
+            <p><span class="es">La mayoría de reemplazos de parabrisas toman 30-60 minutos. Ofrecemos servicio el mismo día cuando es posible.</span><span class="en">Most windshield replacements take 30-60 minutes. We offer same-day service when possible.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">¿Aceptan seguros?</span><span class="en">Do you accept insurance?</span></h3>
+            <p><span class="es">Sí, trabajamos con la mayoría de compañías de seguros. Te ayudamos con el proceso de reclamación.</span><span class="en">Yes, we work with most insurance companies. We help you with the claims process.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">¿Cuánto cuesta?</span><span class="en">How much does it cost?</span></h3>
+            <p><span class="es">Los precios varían según el vehículo y tipo de vidrio. Ofrecemos cotizaciones gratis sin compromiso.</span><span class="en">Prices vary by vehicle and glass type. We offer free, no-obligation quotes.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">¿Ofrecen garantía?</span><span class="en">Do you offer a warranty?</span></h3>
+            <p><span class="es">Sí, garantizamos nuestro trabajo. Sin fugas, sin problemas. Si algo sale mal, lo arreglamos gratis.</span><span class="en">Yes, we guarantee our work. No leaks, no problems. If something goes wrong, we fix it for free.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">¿Qué áreas cubren?</span><span class="en">What areas do you cover?</span></h3>
+            <p><span class="es">Servimos Hempstead y todo Greater Houston. Llámanos para confirmar si cubrimos tu área.</span><span class="en">We serve Hempstead and all of Greater Houston. Call us to confirm if we cover your area.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">¿Necesito estar presente durante el servicio?</span><span class="en">Do I need to be present during service?</span></h3>
+            <p><span class="es">No es necesario, pero es recomendable. Puedes dejarnos las llaves y nosotros hacemos el trabajo.</span><span class="en">Not required, but recommended. You can leave us the keys and we'll do the work.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="grid-2" style="max-width: 900px; margin: 0 auto;">
+          <div class="reveal">
+            <h2><span class="es">Sobre nosotros</span><span class="en">About us</span></h2>
+            <p><span class="es">Somos un negocio familiar con una meta: hacer el trabajo bien a la primera. La mayoría de nuestros clientes llegan por recomendación — y eso nos enorgullece.</span><span class="en">We're a small, family-run business with one goal: do the job right the first time. Most of our work comes from referrals — we're proud of that.</span></p>
+          </div>
+          <div class="card reveal">
+            <h3><span class="es">Área de servicio</span><span class="en">Service area</span></h3>
+            <p><span class="es">Hempstead y todo Greater Houston</span><span class="en">Hempstead &amp; Greater Houston</span></p>
+            <p><span class="es">Horario: Lun–Sáb 7:00–7:00</span><span class="en">Hours: Mon–Sat 7:00 AM–7:00 PM</span></p>
+            <p style="margin-top: var(--space-md);"><strong><span class="es">Cotizaciones gratis — sin compromiso</span><span class="en">Free estimates — no obligation</span></strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta-strip">
+      <div class="container inner">
+        <h2><span class="es">Obtén tu cotización gratis hoy mismo</span><span class="en">Get your free quote today</span></h2>
+        <p style="color: rgba(255,255,255,0.9); margin-bottom: var(--space-lg); text-align: center;">
+          <span class="es">Servicio el mismo día disponible. Respuesta en menos de 1 hora.</span>
+          <span class="en">Same-day service available. Response within 1 hour.</span>
+        </p>
+        <div>
+          <a class="btn primary" href="https://wa.me/19797331769?text=Hola%20YDM%2C%20necesito%20una%20cotizaci%C3%B3n%20para%3A%20%5Ba%C3%B1o%2Fmarca%2Fmodelo%5D%2C%20%5Bvidrio%5D%2C%20ZIP%3A%20____.%20(EN%3A%20Quote%20for%3A%20%5Byear%2Fmake%2Fmodel%5D%2C%20%5Bglass%5D%2C%20ZIP%3A%20____)" rel="noopener" target="_blank">
+            <span class="es">💬 WhatsApp - Respuesta Rápida</span><span class="en">💬 WhatsApp - Fast Response</span>
+          </a>
+          <a class="btn outline" href="tel:+19797331769" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3);">
+            <span class="es">📞 Llamar Ahora</span><span class="en">📞 Call Now</span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/19797331769?text=Hola%20YDM%2C%20necesito%20una%20cotizaci%C3%B3n%20para%3A%20%5Ba%C3%B1o%2Fmarca%2Fmodelo%5D%2C%20%5Bvidrio%5D%2C%20ZIP%3A%20____.%20(EN%3A%20Quote%20for%3A%20%5Byear%2Fmake%2Fmodel%5D%2C%20%5Bglass%5D%2C%20ZIP%3A%20____)" 
+     class="floating-wa" 
+     rel="noopener" 
+     target="_blank"
+     aria-label="Contact us on WhatsApp">
+  </a>
+
+  <!-- Sticky Mobile CTA -->
+  <div aria-hidden="false" class="sticky-cta">
+    <div class="bar">
+      <a class="btn whats" href="https://wa.me/19797331769?text=Hola%20YDM%2C%20necesito%20una%20cotizaci%C3%B3n%20para%3A%20%5Ba%C3%B1o%2Fmarca%2Fmodelo%5D%2C%20%5Bvidrio%5D%2C%20ZIP%3A%20____.%20(EN%3A%20Quote%20for%3A%20%5Byear%2Fmake%2Fmodel%5D%2C%20%5Bglass%5D%2C%20ZIP%3A%20____)" rel="noopener" target="_blank">
+        <span class="es">WhatsApp</span><span class="en">WhatsApp</span>
+      </a>
+      <a class="btn primary" href="tel:+19797331769">
+        <span class="es">Llamar</span><span class="en">Call</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="cols">
+    <div class="container cols">
       <div>
         <h4>YDM Auto Glass</h4>
-        <p class="es">Hempstead y todo Greater Houston</p>
-        <p class="en">Hempstead & Greater Houston</p>
+        <p><span class="es">Hempstead y Greater Houston</span><span class="en">Hempstead &amp; Greater Houston</span></p>
       </div>
       <div>
-        <h4 class="es">Contacto</h4><h4 class="en">Contact</h4>
+        <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
         <p><a href="tel:+19797331769">979-733-1769</a> · <a href="tel:+13462459543">346-245-9543</a></p>
         <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
-        <p><a href="https://wa.me/19797331769" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p><a href="https://wa.me/19797331769?text=Hola%20YDM%2C%20necesito%20una%20cotizaci%C3%B3n%20para%3A%20%5Ba%C3%B1o%2Fmarca%2Fmodelo%5D%2C%20%5Bvidrio%5D%2C%20ZIP%3A%20____.%20(EN%3A%20Quote%20for%3A%20%5Byear%2Fmake%2Fmodel%5D%2C%20%5Bglass%5D%2C%20ZIP%3A%20____)" rel="noopener" target="_blank">WhatsApp</a></p>
       </div>
       <div>
-        <h4 class="es">Horario</h4><h4 class="en">Hours</h4>
-        <p class="es">Lun–Sáb 8:00–6:00 · Dom Cerrado</p>
-        <p class="en">Mon–Sat 8:00–6:00 · Sun Closed</p>
+        <h4><span class="es">Horario</span><span class="en">Hours</span></h4>
+        <p><span class="es">Lun–Sáb 7:00–7:00</span><span class="en">Mon–Sat 7:00 AM–7:00 PM</span></p>
       </div>
     </div>
-    <p class="tiny">© <span id="year"></span> YDM Auto Glass</p>
+    <p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
   </footer>
 
   <script src="main.js"></script>
