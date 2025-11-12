@@ -988,3 +988,42 @@ p {
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Contact grid alignment */
+.contact .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;             /* prevents the map card from “sliding” */
+  gap: var(--space-lg);
+}
+
+@media (max-width: 800px) {
+  .contact .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Map card cleanup */
+.card.map {
+  padding: 0;                     /* remove inner padding so iframe fills edge-to-edge */
+  overflow: hidden;
+}
+
+/* Keep the map perfectly centered and responsive */
+.card.map iframe {
+  display: block;                 /* removes inline-gap */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;            /* responsive height; adjust as you like (3/2, 16/9, etc.) */
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
+/* Center the “Open in Google Maps” link */
+.card.map .map-link {
+  display: block;
+  text-align: center;
+  padding: 8px 12px 12px;
+  color: var(--text-secondary);
+}
+.card.map .map-link:hover { color: var(--brand-primary); }
