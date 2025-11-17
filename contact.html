@@ -4,118 +4,384 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Contact – YDM Auto Glass</title>
-  
-  <!-- Fonts -->
+
+  <meta name="description" content="Contact YDM Auto Glass for a free mobile auto glass quote. Send your vehicle details, ZIP code, and photos for fast, same-day service in Greater Houston."/>
+
+  <!-- Fonts (match index/services) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet"></noscript>
+
   <link href="style.css" rel="stylesheet"/>
 </head>
-<body>
-<header class="site-header">
-    <a class="brand" href="./">
-      <img alt="YDM Auto Glass logo" decoding="async" height="120" src="assets/logo/windshield-logo.svg" width="120"/>
-      <span>YDM Auto Glass</span>
-    </a>
-<nav class="nav">
-<a href="./"><span class="es">Inicio</span><span class="en">Home</span></a>
-<a href="services.html"><span class="es">Servicios</span><span class="en">Services</span></a>
-<a href="contact.html"><span class="es">Contacto</span><span class="en">Contact</span></a>
-</nav>
-    <button aria-label="Change language" class="lang-btn" id="langSwitch">ES / EN</button>
-</header>
-<main class="section contact">
-  <div class="container">
-    <h1 class="reveal">
-      <span class="es">Contacto</span><span class="en">Contact</span>
-    </h1>
+<body class="contact">
+  <!-- Announcement Bar -->
+  <div class="notice-bar">
+    <p>
+      <span class="es">📅 Atendemos servicio el mismo día en Houston. Llama al</span>
+      <span class="en">📅 Same-day mobile service in Houston. Call</span>
+      <a href="tel:+13462459543">346-245-9543</a>
+    </p>
+  </div>
 
-    <!-- Contact layout -->
-    <div class="contact-grid">
-      <!-- 1) Contact info -->
-      <div class="contact-card card reveal">
-        <h3><span class="es">Llámanos</span><span class="en">Call us</span></h3>
+  <!-- Header (same structure as index/services) -->
+  <header class="site-header" role="banner">
+    <a class="brand" href="./" aria-label="YDM Auto Glass home">
+      <img
+        class="brand-logo"
+        alt="YDM Auto Glass logo"
+        decoding="async"
+        src="assets/logo/logo-blue.svg"
+        width="120"
+        height="120"
+      />
+      <span class="brand-name">YDM Auto Glass</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./">
+        <span class="es">Inicio</span>
+        <span class="en">Home</span>
+      </a>
+      <a href="services.html">
+        <span class="es">Servicios</span>
+        <span class="en">Services</span>
+      </a>
+      <a href="contact.html">
+        <span class="es">Contacto</span>
+        <span class="en">Contact</span>
+      </a>
+    </nav>
+
+    <div aria-label="Language" class="lang-segment" id="langSegment" role="group">
+      <button aria-pressed="false" data-lang="es" type="button">ES</button>
+      <button aria-pressed="false" data-lang="en" type="button">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Hero / Intro -->
+      <section class="contact-hero reveal">
+        <h1>
+          <span class="es" lang="es">Pedir una cotización de vidrio para tu vehículo</span>
+          <span class="en" lang="en">Request your auto glass quote</span>
+        </h1>
+
+        <p class="muted">
+          <span class="es" lang="es">
+            Servicio 100% móvil en Hempstead y Greater Houston. Usa este formulario para recibir una cotización rápida o envíanos un mensaje por WhatsApp para respuesta inmediata.
+          </span>
+          <span class="en" lang="en">
+            100% mobile service in Hempstead and Greater Houston. Use this form to get a fast quote, or message us on WhatsApp for the quickest response.
+          </span>
+        </p>
+      </section>
+
+      <!-- Two-column layout: contact info + form -->
+      <section class="section">
+        <div class="contact-grid">
+          <!-- Contact info / instructions -->
+          <aside class="card reveal">
+            <h2>
+              <span class="es">Cómo contactarnos</span>
+              <span class="en">How to contact us</span>
+            </h2>
+            <p>
+              <span class="es">
+                Puedes llamarnos, mandarnos mensaje por WhatsApp o llenar el formulario. Si envías fotos del daño,
+                podemos darte una cotización más precisa.
+              </span>
+              <span class="en">
+                You can call, message us on WhatsApp, or use the form. If you send photos of the damage,
+                we can give you a more precise estimate.
+              </span>
+            </p>
+
+            <div>
+              <h3><span class="es">Teléfono</span><span class="en">Phone</span></h3>
+              <p>
+                <a href="tel:+13462459543">346-245-9543</a><br/>
+                <a href="tel:+19797331769">979-733-1769</a>
+              </p>
+
+              <h3>WhatsApp</h3>
+              <p>
+                <a href="https://wa.me/13462459543" rel="noopener" target="_blank">wa.me/13462459543</a>
+              </p>
+
+              <h3>Email</h3>
+              <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
+
+              <h3>
+                <span class="es">Horario</span><span class="en">Hours</span>
+              </h3>
+              <p>
+                <span class="es">Lun–Sáb 7:00–7:00</span>
+                <span class="en">Mon–Sat 7:00 AM–7:00 PM</span>
+              </p>
+
+              <h3>
+                <span class="es">Área de servicio</span><span class="en">Service area</span>
+              </h3>
+              <p>
+                <span class="es">Hempstead y todo Greater Houston</span>
+                <span class="en">Hempstead & Greater Houston</span>
+              </p>
+            </div>
+
+            <div>
+              <h3>
+                <span class="es">Qué incluir en tu mensaje</span>
+                <span class="en">What to include in your message</span>
+              </h3>
+              <ul>
+                <li>
+                  <span class="es">Año, marca y modelo (YMM)</span>
+                  <span class="en">Year, make & model (YMM)</span>
+                </li>
+                <li>
+                  <span class="es">Tipo de vidrio (parabrisas, lateral, trasero, etc.)</span>
+                  <span class="en">Glass type (windshield, side, rear, etc.)</span>
+                </li>
+                <li>
+                  <span class="es">Código postal donde está el vehículo</span>
+                  <span class="en">ZIP code where the vehicle is located</span>
+                </li>
+                <li>
+                  <span class="es">Fotos del daño si es posible</span>
+                  <span class="en">Photos of the damage if possible</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Contact / quote form -->
+          <section class="form reveal">
+            <h2>
+              <span class="es">Formulario de cotización</span>
+              <span class="en">Quote request form</span>
+            </h2>
+            <p class="muted">
+              <span class="es">Llena los datos y te responderemos lo antes posible.</span>
+              <span class="en">Fill out the details and we’ll reply as soon as possible.</span>
+            </p>
+
+            <form id="quoteForm" action="#" method="POST">
+              <div class="input-group">
+                <label>
+                  <span class="es" lang="es">Nombre completo</span>
+                  <span class="en" lang="en">Full name</span>
+                </label>
+                <input type="text" name="name" required placeholder="John Doe" />
+              </div>
+
+              <div class="input-group">
+                <label>
+                  <span class="es" lang="es">Teléfono</span>
+                  <span class="en" lang="en">Phone</span>
+                </label>
+                <input type="tel" name="phone" required placeholder="346-245-9543" />
+              </div>
+
+              <div class="input-group">
+                <label>
+                  <span class="es" lang="es">Año / marca / modelo</span>
+                  <span class="en" lang="en">Year / make / model</span>
+                </label>
+                <input type="text" name="vehicle" required placeholder="2018 Ford F-150" />
+              </div>
+
+              <div class="input-group">
+                <label>
+                  <span class="es" lang="es">Tipo de vidrio</span>
+                  <span class="en" lang="en">Glass type</span>
+                </label>
+                <select name="glass" required>
+                  <option value="" disabled selected>
+                    <span class="es">Selecciona una opción</span>
+                    <span class="en">Select an option</span>
+                  </option>
+                  <option>Windshield</option>
+                  <option>Side window</option>
+                  <option>Back glass</option>
+                  <option>Vent/quarter glass</option>
+                  <option>Other / Unknown</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label>
+                  <span class="es" lang="es">Tu mensaje (opcional)</span>
+                  <span class="en" lang="en">Message (optional)</span>
+                </label>
+                <textarea name="message" rows="3" placeholder="Describe el daño o adjunta detalles…"></textarea>
+              </div>
+
+              <div class="notice muted small">
+                <span class="es" lang="es">Revisamos tu mensaje y te contactamos en pocos minutos durante horario laboral.</span>
+                <span class="en" lang="en">We review your message and reply within minutes during business hours.</span>
+              </div>
+
+              <button class="btn primary" type="submit">
+                <span class="es" lang="es">Enviar solicitud</span>
+                <span class="en" lang="en">Send request</span>
+              </button>
+
+              <div class="muted small center" style="margin-top: var(--space-sm);">
+                <span class="es" lang="es">¿Prefieres WhatsApp? Haz clic abajo.</span>
+                <span class="en" lang="en">Prefer WhatsApp? Tap below.</span>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section>
+        <h2>
+          <span class="es" lang="es">Área de servicio</span>
+          <span class="en" lang="en">Service area</span>
+        </h2>
+        <div class="card map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887240.0019382366!2d-96.14709157730665!3d29.697120935986934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b86e6fd64abb%3A0x6eeea55b30b8f818!2sHouston%20Metropolitan%20Area%2C%20TX!5e0!3m2!1sen!2sus!4v1763359237684!5m2!1sen!2sus"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"   allowfullscreen
+          title="Service area map for YDM Auto Glass">
+        </iframe>
+        <a class="map-link" href="https://maps.google.com/?q=Houston,Texas" target="_blank" rel="noopener">
+          <span class="es" lang="es">📍 Abrir Houston en Google Maps</span>
+          <span class="en" lang="en">📍 Open Houston in Google Maps</span>
+        </a>
+        </div>
+      </section>
+
+      <!-- Contact page mini FAQ -->
+      <section class="section section-alt">
+      <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Cuánto tardan en responder?</span>
+            <span class="en" lang="en">How fast do you respond?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              La mayoría de las solicitudes reciben respuesta en minutos durante horario laboral. 
+              Para respuesta inmediata, usa WhatsApp.
+            </span>
+            <span class="en" lang="en">
+              Most requests get a reply within minutes during business hours. 
+              For the fastest response, use WhatsApp.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 2 -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Ofrecen servicio el mismo día?</span>
+            <span class="en" lang="en">Do you offer same-day service?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              Sí, según disponibilidad. Si nos contactas temprano, normalmente podemos atenderte el mismo día.
+            </span>
+            <span class="en" lang="en">
+              Yes, depending on availability. If you contact us early in the day, same-day service is often possible.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 3 -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Necesito llevar el vehículo a algún lugar?</span>
+            <span class="en" lang="en">Do I need to bring the vehicle anywhere?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              No. Somos 100% móviles: vamos a tu casa, trabajo o taller.
+            </span>
+            <span class="en" lang="en">
+              No. We are 100% mobile — we come to your home, work, or shop.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 4 -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Cuánto cuesta el servicio?</span>
+            <span class="en" lang="en">How much does service cost?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              Depende del modelo del vehículo y del tipo de vidrio. Envíanos año/marca/modelo y te damos una cotización exacta.
+            </span>
+            <span class="en" lang="en">
+              It depends on the vehicle and the type of glass. Send us the year/make/model and we’ll give you an exact quote.
+            </span>
+          </p>
+        </article>
+      </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/13462459543"
+    class="floating-wa"
+    rel="noopener"
+    target="_blank"
+    aria-label="Contact YDM Auto Glass on WhatsApp"
+    data-wa="contact-floating"
+  ></a>
+
+  <!-- Sticky Mobile CTA (identical structure to index/services) -->
+  <div aria-hidden="false" class="sticky-cta">
+    <div class="bar">
+      <a class="btn whats"
+         href="https://wa.me/13462459543"
+         rel="noopener" target="_blank"
+         data-wa="contact-sticky-whatsapp">
+        <span class="es">WhatsApp</span><span class="en">WhatsApp</span>
+      </a>
+      <a class="btn primary" href="tel:+13462459543">
+        <span class="es">Llamar</span><span class="en">Call</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="site-footer">
+    <div class="container cols">
+      <div>
+        <h4>YDM Auto Glass</h4>
         <p>
-          <a href="tel:+13462459543">346-245-9543</a><br/>
+          <span class="es">Hempstead y Greater Houston</span>
+          <span class="en">Hempstead & Greater Houston</span>
+        </p>
+      </div>
+      <div>
+        <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
+        <p>
+          <a href="tel:+13462459543">346-245-9543</a>
+          &nbsp;·&nbsp;
           <a href="tel:+19797331769">979-733-1769</a>
         </p>
         <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
-        <p><a class="btn whats" href="https://wa.me/13462459543" rel="noopener" target="_blank">WhatsApp</a></p>
-
+        <p><a href="https://wa.me/13462459543" rel="noopener" target="_blank" data-wa="contact-footer-link">WhatsApp</a></p>
+      </div>
+      <div>
         <h4><span class="es">Horario</span><span class="en">Hours</span></h4>
         <p><span class="es">Lun–Sáb 7:00–7:00</span><span class="en">Mon–Sat 7:00 AM–7:00 PM</span></p>
-
-        <h4><span class="es">Área de servicio</span><span class="en">Service area</span></h4>
-        <p><span class="es">Hempstead y todo Greater Houston</span><span class="en">Hempstead &amp; Greater Houston</span></p>
-      </div>
-
-      <!-- 2) Map -->
-      <div class="card map reveal">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4034.004678232821!2d-96.25240962445065!3d29.930011174981466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDU1JzQ4LjAiTiA5NsKwMTQnNTkuNCJX!5e1!3m2!1sen!2sus!4v1762831286036!5m2!1sen!2sus"
-          title="Mapa de servicio / Service map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <a class="map-link" href="https://maps.app.goo.gl/BHYKYmTMAzTQLub46" target="_blank" rel="noopener">
-          📍 Open in Google Maps
-        </a>
-      </div>
-
-      <!-- 3) Quote form (spans full right column) -->
-      <div class="form card reveal">
-        <h3><span class="es">Pide tu cotización</span><span class="en">Request a quote</span></h3>
-        <form id="quoteForm" action="#" method="POST">
-          <label><span class="es">Nombre</span><span class="en">Name</span></label>
-          <input name="name" placeholder="John Doe / Juan Pérez" required type="text"/>
-
-          <label><span class="es">Teléfono</span><span class="en">Phone</span></label>
-          <input name="phone" placeholder="+1 346 245 9543" required type="tel"/>
-
-          <label><span class="es">Correo (opcional)</span><span class="en">Email (optional)</span></label>
-          <input name="email" placeholder="you@example.com" type="email"/>
-
-          <label><span class="es">Mensaje</span><span class="en">Message</span></label>
-          <textarea name="message" placeholder="Vehículo, año, modelo, VIN y qué necesitas" required rows="4"></textarea>
-
-          <small>
-            <span class="es">No compartiremos tu información. Respondemos la mayoría de cotizaciones en 1 hora.</span>
-            <span class="en">We never share your info. Most quotes answered within an hour.</span>
-          </small>
-
-          <button class="btn primary" type="submit">
-            <span class="es">Enviar</span><span class="en">Send</span>
-          </button>
-        </form>
       </div>
     </div>
-  </div>
-</main>
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/13462459543" 
-     class="floating-wa" 
-     rel="noopener" 
-     target="_blank"
-     aria-label="Contact us on WhatsApp">
-  </a>
+    <p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
+  </footer>
 
-  <!-- Sticky mobile CTA -->
-<div aria-hidden="false" class="sticky-cta">
-<div class="bar">
-<a class="btn whats" href="https://wa.me/13462459543" rel="noopener" target="_blank">WhatsApp</a>
-<a class="btn primary" href="tel:+13462459543"><span class="es">Llamar</span><span class="en">Call</span></a>
-</div>
-</div>
-<footer class="site-footer">
-<div class="container cols">
-<div><h4>YDM Auto Glass</h4><p><span class="es">Hempstead y Greater Houston</span><span class="en">Hempstead &amp; Greater Houston</span></p></div>
-<div><h4><span class="es">Contacto</span><span class="en">Contact</span></h4><p><a href="tel:+13462459543">346-245-9543</a> · <a href="tel:+19797331769">979-733-1769</a></p><p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p><p><a href="https://wa.me/13462459543" rel="noopener" target="_blank">WhatsApp</a></p></div>
-<div><h4><span class="es">Horario</span><span class="en">Hours</span></h4><p><span class="es">Lun–Sáb 7:00–7:00</span><span class="en">Mon–Sat 7:00 AM–7:00 PM</span></p></div>
-</div>
-<p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
-</footer>
-<script src="main.js?v=1"></script>
+  <script src="main.js?v=1" defer></script>
 </body>
 </html>

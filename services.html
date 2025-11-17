@@ -3,128 +3,499 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Services – YDM Auto Glass</title>
-  
-  <!-- Fonts -->
+  <title>Services – YDM Auto Glass | Mobile Auto Glass Repair & Replacement</title>
+
+  <meta name="description" content="Auto glass services for cars, trucks, RVs, 18-wheelers and heavy machinery. Mobile windshield repair and replacement across Greater Houston with 25+ years of experience."/>
+
+  <!-- Fonts - match index.html for consistency -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  </noscript>
+
   <link href="style.css" rel="stylesheet"/>
 </head>
-<body>
-<header class="site-header">
-  <a class="brand" href="./">
-    <img alt="YDM Auto Glass logo" decoding="async" height="120" src="assets/logo/windshield-logo.svg" width="120"/>
-    <span>YDM Auto Glass</span>
-  </a>
-  <nav class="nav">
-    <a href="./"><span class="es">Inicio</span><span class="en">Home</span></a>
-    <a href="services.html"><span class="es">Servicios</span><span class="en">Services</span></a>
-    <a href="contact.html"><span class="es">Contacto</span><span class="en">Contact</span></a>
-  </nav>
-  <button aria-label="Change language" class="lang-btn" id="langSwitch">ES / EN</button>
-</header>
+<body class="services">
 
-<main class="section">
-  <div class="container">
-    <h1 class="reveal"><span class="es">Servicios</span><span class="en">Services</span></h1>
-
-    <div class="grid">
-      <article class="card reveal">
-        <div class="thumb">
-          <img alt="Windshield replacement on sedan" height="400" loading="lazy" src="assets/images/img-20240613-wa0003-mnl3w48M22tgjR07.avif" width="600"/>
-        </div>
-        <h3><span class="es">Parabrisas y cristales de auto</span><span class="en">Windshields &amp; auto glass</span></h3>
-        <ul>
-          <li><span class="es">Ajuste correcto y sellado limpio.</span><span class="en">Proper fit and clean seal.</span></li>
-          <li><span class="es">Reparación de astillas (según tamaño).</span><span class="en">Chip repair (case-by-case).</span></li>
-          <li><span class="es">Servicio móvil donde estés.</span><span class="en">Mobile service wherever you are.</span></li>
-        </ul>
-      </article>
-
-      <article class="card reveal">
-        <div class="thumb">
-          <img alt="RV windshield work" height="400" loading="lazy" src="assets/images/img-20240613-wa0015-AzGroMLQk1UJLlDg.avif" width="600"/>
-        </div>
-        <h3><span class="es">RV / Casas rodantes</span><span class="en">RVs / Motorhomes</span></h3>
-        <ul>
-          <li><span class="es">Instalación cuidadosa, sellado resistente.</span><span class="en">Careful install, weather-resistant seals.</span></li>
-          <li><span class="es">Repuestos según modelo.</span><span class="en">Model-specific replacements.</span></li>
-        </ul>
-      </article>
-
-      <article class="card reveal">
-        <div class="thumb">
-          <img alt="Heavy machinery glass" height="400" loading="lazy" src="assets/images/img-20240620-wa0006-d95pLZqRkVfKEGOj.avif" width="600"/>
-        </div>
-        <h3><span class="es">18-wheelers y maquinaria</span><span class="en">18-wheelers &amp; machinery</span></h3>
-        <ul>
-          <li><span class="es">Laminados a medida.</span><span class="en">Custom laminated glass.</span></li>
-          <li><span class="es">Instalación profesional.</span><span class="en">Professional install.</span></li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="section center">
-      <a class="btn primary" href="contact.html">
-        <span class="es">Pedir mi cotización</span><span class="en">Request My Quote</span>
-      </a>
-      <a class="btn outline" href="tel:+13462459543">
-        <span class="es">Llamar ahora</span><span class="en">Call Now</span>
-      </a>
-    </div>
+  <!-- Announcement Bar -->
+  <div class="notice-bar">
+    <p>
+      <span class="es">📅 Atendemos servicio el mismo día en Houston. Llama al</span>
+      <span class="en">📅 Same-day mobile service in Houston. Call</span>
+      <a href="tel:+13462459543">346-245-9543</a>
+    </p>
   </div>
-</main>
 
-<!-- Floating WhatsApp Button -->
-<a
-  href="https://wa.me/13462459543"
-  class="floating-wa"
-  rel="noopener"
-  target="_blank"
-  aria-label="Contact us on WhatsApp">
-</a>
-
-<!-- Sticky mobile CTA -->
-<div aria-hidden="false" class="sticky-cta">
-  <div class="bar">
-    <a class="btn whats"
-       href="https://wa.me/13462459543"
-       rel="noopener" target="_blank">WhatsApp</a>
-    <a class="btn primary" href="tel:+13462459543">
-      <span class="es">Llamar</span><span class="en">Call</span>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <a class="brand" href="./" aria-label="YDM Auto Glass home">
+      <img
+        class="brand-logo"
+        alt="YDM Auto Glass logo"
+        decoding="async"
+        src="assets/logo/logo-blue.svg"
+        width="120"
+        height="120"
+      />
+      <span class="brand-name">YDM Auto Glass</span>
     </a>
-  </div>
-</div>
 
-<footer class="site-footer">
-  <div class="container cols">
-    <div>
-      <h4>YDM Auto Glass</h4>
-      <p><span class="es">Hempstead y Greater Houston</span><span class="en">Hempstead &amp; Greater Houston</span></p>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./">
+        <span class="es">Inicio</span>
+        <span class="en">Home</span>
+      </a>
+      <a href="services.html">
+        <span class="es">Servicios</span>
+        <span class="en">Services</span>
+      </a>
+      <a href="contact.html">
+        <span class="es">Contacto</span>
+        <span class="en">Contact</span>
+      </a>
+    </nav>
+
+    <div aria-label="Language" class="lang-segment" id="langSegment" role="group">
+      <button aria-pressed="false" data-lang="es" type="button">ES</button>
+      <button aria-pressed="false" data-lang="en" type="button">EN</button>
     </div>
-    <div>
-      <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
-      <p>
-        <a href="tel:+13462459543">346-245-9543</a>
-        &nbsp;·&nbsp;
-        <a href="tel:+19797331769">979-733-1769</a>
-      </p>
-      <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
-      <p>
-        <a href="https://wa.me/13462459543"
-           rel="noopener" target="_blank">WhatsApp</a>
-      </p>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Services Hero / Intro -->
+      <section class="services-hero reveal">
+        <h1>
+          <span class="es" lang="es">Servicios de reparación y reemplazo de vidrios</span>
+          <span class="en" lang="en">Auto glass repair &amp; replacement services</span>
+        </h1>
+        <p class="muted">
+          <span class="es" lang="es">
+            Reparamos y reemplazamos parabrisas, vidrios laterales y traseros para autos, camionetas, RV y maquinaria pesada.
+            Servicio 100% móvil en Hempstead y Greater Houston, con más de 25 años de experiencia.
+          </span>
+          <span class="en" lang="en">
+            We repair and replace windshields, side glass, and back glass for cars, trucks, RVs, and heavy equipment.
+            100% mobile service in Hempstead and Greater Houston, with 25+ years of experience.
+          </span>
+        </p>
+        <ul class="hero-points">
+          <li>
+            <span class="es">Parabrisas, vidrios laterales y traseros para casi cualquier vehículo</span>
+            <span class="en">Windshields, side, and back glass for almost any vehicle</span>
+          </li>
+          <li>
+            <span class="es">Servicio móvil el mismo día cuando es posible</span>
+            <span class="en">Same-day mobile service when possible</span>
+          </li>
+          <li>
+            <span class="es">Trabajo limpio, garantizado, sin fugas ni desorden</span>
+            <span class="en">Clean, guaranteed work with no leaks or mess</span>
+          </li>
+        </ul>
+          <div class="cta-row">
+            <a class="btn primary whats"
+              href="https://wa.me/13462459543"
+              rel="noopener" target="_blank"
+              data-wa="services-hero-whatsapp">
+              <span class="es" lang="es">💬 WhatsApp · Cotización rápida</span>
+              <span class="en" lang="en">💬 WhatsApp · Fast quote</span>
+            </a>
+            <a class="btn outline" href="tel:+13462459543">
+              <span class="es" lang="es">📞 Llamar ahora</span>
+              <span class="en" lang="en">📞 Call now</span>
+            </a>
+            <a class="btn outline" href="contact.html">
+              <span class="es" lang="es">📝 Enviar formulario</span>
+              <span class="en" lang="en">📝 Request quote online</span>
+            </a>
+          </div>
+      </section>
+
+      <!-- Service Cards -->
+      <section class="section" id="what-we-do">
+        <h2 class="reveal">
+          <span class="es" lang="es">Lo que hacemos</span>
+          <span class="en" lang="en">What we do</span>
+        </h2>
+
+        <div class="grid">
+          <!-- Auto glass -->
+          <article class="card reveal">
+            <div class="thumb">
+              <img
+                alt="Mobile windshield replacement on a sedan in the Houston area"
+                height="400"
+                loading="lazy"
+                src="assets/images/img-20240613-wa0003-mnl3w48M22tgjR07.avif"
+                width="600"
+              />
+            </div>
+            <h3>
+              <span  class="es" lang="es">Parabrisas y cristales de auto</span>
+              <span class="en" lang="en">Windshields & auto glass</span>
+            </h3>
+            <ul>
+              <li>
+                <span class="es" lang="es">Parabrisas, vidrios laterales y traseros.</span>
+                <span class="en" lang="en">Windshields, side and back glass.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Reemplazo limpio y sin fugas.</span>
+                <span class="en" lang="en">Clean, leak-free replacement.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Reparación de estrelladuras y grietas pequeñas.</span>
+                <span class="en" lang="en">Chip and small crack repair.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Servicio móvil a tu casa, trabajo o taller.</span>
+                <span class="en" lang="en">Mobile service to your home, work, or shop.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- RVs / Motorhomes -->
+          <article class="card reveal">
+            <div class="thumb">
+              <img
+                alt="Auto glass technician working on an RV windshield at a customer location"
+                height="400"
+                loading="lazy"
+                src="assets/images/img-20240613-wa0015-AzGroMLQk1UJLlDg.avif"
+                width="600"
+              />
+            </div>
+            <h3>
+              <span class="es" lang="es">Vidrios para RV y casas rodantes</span>
+              <span class="en" lang="en">RV &amp; motorhome glass service</span>
+            </h3>
+            <ul>
+              <li>
+                <span class="es" lang="es">Parabrisas y vidrios laterales para RV y casas rodantes.</span>
+                <span class="en" lang="en">Windshields and side glass for RVs and motorhomes.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Servicio en tu domicilio, camping o taller.</span>
+                <span class="en" lang="en">Service at your home, campsite, or shop.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Manejo cuidadoso de vehículos grandes.</span>
+                <span class="en" lang="en">Careful handling of large vehicles.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Opciones para vidrios templados y laminados.</span>
+                <span class="en" lang="en">Options for tempered and laminated glass.</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 18-wheelers & machinery -->
+          <article class="card reveal">
+            <div class="thumb">
+              <img
+                alt="Heavy equipment and 18-wheeler windshield glass service in Greater Houston"
+                height="400"
+                loading="lazy"
+                src="assets/images/img-20240620-wa0006-d95pLZqRkVfKEGOj.avif"
+                width="600"
+              />
+            </div>
+            <h3>
+              <span class="es" lang="es">Vidrios para 18-wheelers y maquinaria pesada</span>
+              <span class="en" lang="en">18-wheelers &amp; heavy equipment glass</span>
+            </h3>
+            <ul>
+              <li>
+                <span class="es" lang="es">Tráilers, camiones y maquinaria de construcción o agrícola.</span>
+                <span class="en" lang="en">Trailers, trucks, and construction or agricultural equipment.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Vidrios templados y laminados a medida.</span>
+                <span class="en" lang="en">Custom tempered and laminated glass.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Instalación móvil en patios, obras y ranchos.</span>
+                <span class="en" lang="en">Mobile installation at yards, job sites, and ranches.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Enfoque en minimizar el tiempo fuera de servicio.</span>
+                <span class="en" lang="en">Focused on reducing your downtime.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- What's included in every job -->
+      <section class="section section-alt" id="what-we-do">
+        <h2 class="reveal">
+          <span class="es">Qué incluye cada trabajo</span>
+          <span class="en">What’s included in every job</span>
+        </h2>
+        <div class="grid-3">
+          <div class="card reveal">
+            <h3>🧽 <span class="es">Trabajo limpio</span><span class="en">Clean work</span></h3>
+            <p>
+              <span class="es">Protegemos tu tablero y asientos, recogemos vidrios y dejamos todo ordenado.</span>
+              <span class="en">We protect your dash and seats, clean up glass, and leave everything tidy.</span>
+            </p>
+          </div>
+          <div class="card reveal">
+            <h3>🧪 <span class="es">Material de calidad</span><span class="en">Quality materials</span></h3>
+            <p>
+              <span class="es">Usamos adhesivos y materiales de calidad para un sellado fuerte y seguro.</span>
+              <span class="en">We use quality adhesives and materials for a strong, safe seal.</span>
+            </p>
+          </div>
+          <div class="card reveal">
+            <h3>✅ <span class="es">Garantía</span><span class="en">Warranty</span></h3>
+            <p>
+              <span class="es">Garantizamos nuestro trabajo contra fugas o instalación defectuosa.</span>
+              <span class="en">We stand behind our work against leaks or poor installation.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fleet & heavy machinery mini-section -->
+      <section class="section">
+        <h2 class="reveal">
+          <span class="es">Servicio para flotas y maquinaria pesada</span>
+          <span class="en">Fleet & heavy equipment service</span>
+        </h2>
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3>
+              <span class="es">Para empresas y dueños de flota</span>
+              <span class="en">For businesses and fleet owners</span>
+            </h3>
+            <ul class="pl-lg mt-md">
+              <li>
+                <span class="es" lang="es">Servicio en sitio para flotillas y camiones.</span>
+                <span class="en" lang="en">On-site service for fleets and trucks.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Programación flexible y facturación comercial.</span>
+                <span class="en" lang="en">Flexible scheduling and commercial invoicing.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Reemplazos rápidos para minimizar tiempo fuera de servicio.</span>
+                <span class="en" lang="en">Fast replacements to minimize downtime.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Atendemos camiones de entrega, trabajo y flotillas grandes.</span>
+                <span class="en" lang="en">We service delivery trucks, work trucks, and large fleets.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3>
+              <span class="es">Maquinaria y equipo especial</span>
+              <span class="en">Special equipment & machinery</span>
+            </h3>
+            <ul class="pl-lg mt-md">
+              <li>
+                <span class="es" lang="es">Vidrios para maquinaria agrícola y de construcción.</span>
+                <span class="en" lang="en">Glass for agricultural and construction machinery.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Opciones en vidrio templado y laminado.</span>
+                <span class="en" lang="en">Tempered and laminated glass options.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Instalación móvil en obras, ranchos o patios industriales.</span>
+                <span class="en" lang="en">Mobile installation at job sites, ranches, or yards.</span>
+              </li>
+              <li>
+                <span class="es" lang="es">Atendemos equipo grande o especial (tractores, cargadores, más).</span>
+                <span class="en" lang="en">We service large or specialty equipment (tractors, loaders, more).</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section center pt-lg">
+          <a class="btn primary" href="contact.html">
+            <span class="es" lang="es">Cotización para flota / maquinaria</span>
+            <span class="en" lang="en">Fleet &amp; equipment quote</span>
+          </a>
+
+          <a class="btn outline" href="tel:+13462459543">
+            <span class="es" lang="es">Llamar ahora</span>
+            <span class="en" lang="en">Call now</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Services FAQ -->
+      <section class="section section-alt" id="service-faqs">
+        <h2 class="reveal">
+          <span class="es">Preguntas frecuentes sobre el servicio</span>
+          <span class="en">Service FAQs</span>
+        </h2>
+        <div class="faq-grid">
+        <!-- FAQ 1 – Areas & same-day service -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿En qué áreas ofrecen servicio y es el mismo día?</span>
+            <span class="en" lang="en">What areas do you cover and is it same-day?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              Atendemos Hempstead, Greater Houston y alrededores, según disponibilidad. En muchos casos ofrecemos servicio el mismo día,
+              especialmente si nos contactas por la mañana. Siempre te diremos desde el principio si podemos hacerlo hoy o cuál es la siguiente fecha disponible.
+            </span>
+            <span class="en" lang="en">
+              We service Hempstead, Greater Houston, and nearby areas depending on availability. In many cases we can offer same-day service,
+              especially if you contact us in the morning. We’ll always tell you up front if we can do it today or what the next available date is.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 2 – How long does a job take? -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Cuánto tiempo tarda el reemplazo o la reparación?</span>
+            <span class="en" lang="en">How long does the replacement or repair take?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              La mayoría de los reemplazos de parabrisas toman entre 60 y 90 minutos, incluyendo la limpieza y revisión final.
+              Las reparaciones de estrelladuras suelen tardar 30 minutos o menos. Te avisamos el tiempo estimado antes de empezar el trabajo.
+            </span>
+            <span class="en" lang="en">
+              Most windshield replacements take about 60–90 minutes, including cleanup and final inspection.
+              Chip repairs usually take 30 minutes or less. We’ll let you know the estimated time before we start.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 3 – Insurance / paying out of pocket -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Trabajan con seguro o sólo pago directo?</span>
+            <span class="en" lang="en">Do you work with insurance or only out of pocket?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              Muchos clientes prefieren pagar directo porque el costo es similar al deducible del seguro y así evitan reclamaciones.
+              Si quieres usar tu seguro, podemos darte la información del trabajo para que hables con tu aseguradora.
+            </span>
+            <span class="en" lang="en">
+              Many customers choose to pay out of pocket because the cost is similar to their insurance deductible and avoids a claim.
+              If you want to use insurance, we can provide job details so you can talk with your provider.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 4 – OEM vs aftermarket glass -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Usan vidrio original (OEM) o genérico?</span>
+            <span class="en" lang="en">Do you use OEM or aftermarket glass?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              Trabajamos con vidrio de alta calidad, ya sea OEM o equivalente, según tu vehículo y presupuesto.
+              Siempre te explicamos las opciones disponibles antes de agendar el servicio.
+            </span>
+            <span class="en" lang="en">
+              We work with high-quality glass, either OEM or equivalent, depending on your vehicle and budget.
+              We’ll explain your options before scheduling the job.
+            </span>
+          </p>
+        </article>
+
+        <!-- FAQ 5 – Weather / rain -->
+        <article class="card faq-item reveal">
+          <h3>
+            <span class="es" lang="es">¿Qué pasa si está lloviendo el día del servicio?</span>
+            <span class="en" lang="en">What happens if it’s raining on the day of service?</span>
+          </h3>
+          <p>
+            <span class="es" lang="es">
+              Podemos trabajar bajo techo, en un taller o en un espacio cubierto si está disponible. 
+              Si las condiciones no son seguras para una instalación correcta, reprogramamos tu cita para la siguiente hora o día disponible sin costo extra.
+            </span>
+            <span class="en" lang="en">
+              We can work under cover, in a shop, or in a covered area if you have one.
+              If conditions aren’t safe for a proper installation, we’ll reschedule your appointment for the next available time at no extra charge.
+            </span>
+          </p>
+        </article>
+      </div>
+      </section>
+
+      <!-- CTA strip for this page -->
+      <section class="section center" id="services-quote">
+        <a class="btn primary" href="contact.html">
+          <span class="es">Pedir mi cotización</span>
+          <span class="en">Request my quote</span>
+        </a>
+        <a class="btn outline" href="tel:+13462459543">
+          <span class="es">Llamar ahora</span>
+          <span class="en">Call now</span>
+        </a>
+      </section>
     </div>
-    <div>
-      <h4><span class="es">Horario</span><span class="en">Hours</span></h4>
-      <p><span class="es">Lun–Sáb 7:00–7:00</span><span class="en">Mon–Sat 7:00 AM–7:00 PM</span></p>
+  </main>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/13462459543"
+    class="floating-wa"
+    rel="noopener"
+    target="_blank"
+    aria-label="Contact YDM Auto Glass on WhatsApp"
+    data-wa="services-floating"
+  ></a>
+
+  <!-- Sticky mobile CTA -->
+  <div aria-hidden="false" class="sticky-cta">
+    <div class="bar">
+      <a class="btn whats"
+         href="https://wa.me/13462459543"
+         rel="noopener" target="_blank"
+         data-wa="services-sticky-whatsapp">
+        <span class="es">WhatsApp</span><span class="en">WhatsApp</span>
+      </a>
+      <a class="btn primary" href="tel:+13462459543">
+        <span class="es">Llamar</span><span class="en">Call</span>
+      </a>
     </div>
   </div>
-  <p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
-</footer>
 
-<script src="main.js?v=1"></script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container cols">
+      <div>
+        <h4>YDM Auto Glass</h4>
+        <p>
+          <span class="es">Hempstead y Greater Houston</span>
+          <span class="en">Hempstead & Greater Houston</span>
+        </p>
+      </div>
+      <div>
+        <h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
+        <p>
+          <a href="tel:+13462459543">346-245-9543</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+19797331769">979-733-1769</a>
+        </p>
+        <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
+        <p><a href="https://wa.me/13462459543" rel="noopener" target="_blank" data-wa="services-footer-link">WhatsApp</a></p>
+      </div>
+      <div>
+        <h4><span class="es">Horario</span><span class="en">Hours</span></h4>
+        <p><span class="es">Lun–Sáb 7:00–7:00</span><span class="en">Mon–Sat 7:00 AM–7:00 PM</span></p>
+      </div>
+    </div>
+    <p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
+  </footer>
+
+  <script src="main.js?v=1" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// ===== YDM Auto Glass - main.js v1 (clean) =====
+// ===== YDM Auto Glass - main.js v1 (enhanced) =====
 (function(){
   'use strict';
   
@@ -30,6 +30,9 @@
       });
     }
 
+    // Update placeholders (inputs/textareas) to current language
+    updatePlaceholders(lang);
+
     // Update WhatsApp links to current language
     updateAllWaLinks();
   }
@@ -46,6 +49,33 @@
       "Hola YDM, por favor cotización:\n" +
       "Nombre:\nTeléfono:\nAño/Marca/Modelo:\nVidrio: windshield\nZIP: ____\n(Fotos adjuntas)",
   };
+
+  const GLASS_LABEL = {
+    en: {
+      windshield: 'windshield',
+      side: 'side glass',
+      rear: 'rear glass',
+      quarter: 'quarter glass',
+      other: 'other / not sure'
+    },
+    es: {
+      windshield: 'parabrisas',
+      side: 'vidrio lateral',
+      rear: 'vidrio trasero',
+      quarter: 'ventana pequeña (quarter glass)',
+      other: 'otro / no estoy seguro'
+    }
+  };
+
+  function updatePlaceholders(lang){
+    const key = lang === 'es' ? 'phEs' : 'phEn';
+    const fallbackKey = lang === 'es' ? 'phEn' : 'phEs';
+    $$('[data-ph-es][data-ph-en]').forEach(el=>{
+      const ds = el.dataset;
+      const val = ds[key] || ds[fallbackKey] || el.placeholder || '';
+      if (val) el.placeholder = val;
+    });
+  }
 
   function currentLang(){
     // Prefer our stored lang; fall back to html class/attr
@@ -120,7 +150,7 @@
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add('revealed');
-          }, index * 50);
+          }, index * 40);
           io.unobserve(entry.target);
         }
       });
@@ -180,11 +210,25 @@
   }
 
   // ---------- Service worker ----------
-  function sw(){ 
-    if('serviceWorker' in navigator){ 
-      navigator.serviceWorker.register('sw.js?v=1', { updateViaCache: 'none' }).catch(()=>{}); 
-    } 
+  // function sw(){ 
+  //   if('serviceWorker' in navigator){ 
+  //     navigator.serviceWorker.register('sw.js?v=1', { updateViaCache: 'none' }).catch(()=>{}); 
+  //   } 
+  // }
+
+  // ---------- Service worker ----------
+// Temporarily disabled while we keep tweaking the site
+function sw() {
+  if ('serviceWorker' in navigator) {
+    // Unregister any existing workers so you don't see stale CSS/HTML
+    navigator.serviceWorker.getRegistrations()
+      .then(regs => regs.forEach(reg => reg.unregister()))
+      .catch(() => {});
   }
+  // Intentionally NOT registering sw.js for now
+  // If you want it back later, you can add the registration here again.
+  // navigator.serviceWorker.register('sw.js?v=1', { updateViaCache: 'none' }).catch(()=>{});
+}
 
   // ---------- Language segmented control ----------
   function wireLangSegment(){
@@ -207,28 +251,77 @@
       const phone=form.elements['phone']?.value?.trim()||'';
       const zip=form.elements['zip']?.value?.trim()||'';
       const ymm=form.elements['ymm']?.value?.trim()||'';
-      const glass=form.elements['glass']?.value||'';
+      const glassRaw=form.elements['glass']?.value||'';
       const notes=form.elements['message']?.value?.trim()||'';
 
+      const glassLabel = (GLASS_LABEL[lang] && GLASS_LABEL[lang][glassRaw]) 
+        || glassRaw 
+        || (lang==='es' ? 'no especificado' : 'not specified');
+
       const lines = lang==='es'
-        ? ['Hola YDM, por favor cotización:',
-           `Nombre: ${name}`, `Teléfono: ${phone}`,
-           `YMM: ${ymm}`, `Vidrio: ${glass||'windshield'}`,
-           `ZIP: ${zip}`, notes?`Notas: ${notes}`:null, '(Fotos adjuntas)']
-        : ['Hi YDM, quote please:',
-           `Name: ${name}`, `Phone: ${phone}`,
-           `YMM: ${ymm}`, `Glass: ${glass||'windshield'}`,
-           `ZIP: ${zip}`, notes?`Notes: ${notes}`:null, '(Photos attached)'];
+        ? [
+            'Hola YDM, por favor cotización:',
+            `Nombre: ${name || '—'}`, 
+            `Teléfono: ${phone || '—'}`,
+            '',
+            'Detalles del vehículo:',
+            `YMM: ${ymm || '—'}`,
+            `Vidrio: ${glassLabel}`,
+            `ZIP: ${zip || '—'}`,
+            notes ? '' : null,
+            notes ? `Notas: ${notes}` : null,
+            '',
+            '(Fotos adjuntas)'
+          ]
+        : [
+            'Hi YDM, quote please:',
+            `Name: ${name || '—'}`, 
+            `Phone: ${phone || '—'}`,
+            '',
+            'Vehicle details:',
+            `YMM: ${ymm || '—'}`,
+            `Glass: ${glassLabel}`,
+            `ZIP: ${zip || '—'}`,
+            notes ? '' : null,
+            notes ? `Notes: ${notes}` : null,
+            '',
+            '(Photos attached)'
+          ];
 
       const msg = lines.filter(Boolean).join('\n');
       this.href=`https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}&lang=${lang}&source=contact-form`;
     });
   }
 
-  // ---------- Contact form success ----------
+  // ---------- Live validation + contact form success ----------
+  function setupLiveValidation(form){
+    const fields = form.querySelectorAll('input[required], textarea[required], select[required]');
+    if (!fields.length) return;
+    fields.forEach((field) => {
+      const validate = () => {
+        let isValid = true;
+        if (field.tagName === 'SELECT') {
+          isValid = !!field.value;
+        } else if ('value' in field) {
+          isValid = field.value.trim() !== '';
+        }
+        field.classList.toggle('field-error', !isValid);
+      };
+      field.addEventListener('blur', validate);
+      field.addEventListener('input', validate);
+      if (field.tagName === 'SELECT') {
+        field.addEventListener('change', validate);
+      }
+    });
+  }
+
   function wireContactForm(){
     const form = $('#quoteForm') || $('form[action="#"]');
     if (!form) return;
+
+    // Live validation while the user types
+    setupLiveValidation(form);
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let successMsg = form.querySelector('.form-success');
@@ -259,6 +352,47 @@
     btn.textContent = `${label(getLang())} / ${label(other(getLang()))}`;
   }
 
+  // Auto-highlight current page in nav
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll(".nav a");
+
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute("href");
+
+    // Match: index.html or "./" for home
+    const isHome =
+      (path === "" || path === "index.html") &&
+      (linkHref === "./" || linkHref === "index.html");
+
+    // Match: services.html, contact.html, etc.
+    const isMatch = linkHref === path;
+
+    if (isHome || isMatch) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+});
+
+function highlightActive(){
+  const cur = location.pathname.split('/').pop() || 'index.html';
+  $$('.nav a').forEach(a => {
+    const name = (a.getAttribute('href') || '').split('/').pop() || 'index.html';
+    const isActive =
+      name === cur ||
+      (cur === 'index.html' && (name === '/' || name === './' || name === 'index.html'));
+
+    a.classList.toggle('active', isActive);
+    if (isActive) {
+      a.setAttribute('aria-current', 'page');
+    } else {
+      a.removeAttribute('aria-current');
+    }
+  });
+}
+
   // ---------- Init ----------
   function init(){
     setLang(getLang());
@@ -281,3 +415,4 @@
     init(); 
   }
 })();
+

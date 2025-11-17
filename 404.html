@@ -1,64 +1,154 @@
 <!DOCTYPE html>
-
 <html class="lang-en" lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Page not found – YDM Auto Glass</title>
-<meta content="#3B82F6" name="theme-color"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="style.css" rel="stylesheet"/>
-</head>
-<body>
-<header class="site-header">
-<a aria-label="YDM Auto Glass home" class="brand nav-fade" href="./">
-<img alt="YDM Auto Glass logo" decoding="async" height="40" src="assets/logo/windshield-logo.svg" width="40"/>
-<span>YDM Auto Glass</span>
-</a>
-<nav aria-label="Primary" class="nav">
-<a class="nav-fade" href="./"><span class="es">Inicio</span><span class="en">Home</span></a>
-<a class="nav-fade" href="services.html"><span class="es">Servicios</span><span class="en">Services</span></a>
-<a class="nav-fade" href="contact.html"><span class="es">Contacto</span><span class="en">Contact</span></a>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Page not found – YDM Auto Glass</title>
+  <meta name="theme-color" content="#3B82F6"/>
+  <meta name="robots" content="noindex"/>
 
-</nav>
-<div aria-label="Language" class="lang-segment" id="langSegment" role="group">
-<button aria-pressed="false" data-lang="en" type="button">EN</button>
-<button aria-pressed="false" data-lang="es" type="button">ES</button>
-</div>
-</header>
-<main class="section">
-<div class="container center">
-<h1>404</h1>
-<p><span class="en">We couldn’t find that page.</span><span class="es">No pudimos encontrar esa página.</span></p>
-<p>
-<a class="btn primary nav-fade" href="./"><span class="en">Back to Home</span><span class="es">Volver al inicio</span></a>
-<a class="btn whatsapp" href="https://wa.me/13462459543"><span class="en">WhatsApp us</span><span class="es">Escríbenos por WhatsApp</span></a>
-</p>
-</div>
-</main>
-<footer class="site-footer">
-<div class="container cols">
-<div>
-<h4>YDM Auto Glass</h4>
-<p><span class="es">Hempstead y Greater Houston</span><span class="en">Hempstead &amp; Greater Houston</span></p>
-</div>
-<div>
-<h4><span class="es">Contacto</span><span class="en">Contact</span></h4>
-<p><a href="tel:+13462459543">346-245-9543</a> · <a href="tel:+19797331769">979-733-1769</a></p>
-<p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
-<p><a class="btn whatsapp" data-wa="footer-contact" href="https://wa.me/13462459543">WhatsApp</a></p>
-</div>
-<div>
-<h4><span class="es">Horario</span><span class="en">Hours</span></h4>
-<p><span class="es">Lun–Sáb 7:00–7:00</span><span class="en">Mon–Sat 7:00 AM–7:00 PM</span></p>
-</div>
-</div>
-<p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
-</footer>
-<div aria-hidden="true" class="wa-bubble" id="waBubble">
-<a class="btn whatsapp" data-wa="bubble" href="https://wa.me/13462459543">WhatsApp</a>
-</div>
-<script defer="" src="main.js?v=1"></script>
+  <!-- Fonts (match other pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  >
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    >
+  </noscript>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="not-found">
+  <!-- Optional: announcement bar for consistency -->
+  <div class="notice-bar">
+    <p>
+      <span class="es">📅 Atendemos servicio el mismo día en Houston. Llama al</span>
+      <span class="en">📅 Same-day mobile service in Houston. Call</span>
+      <a href="tel:+13462459543">346-245-9543</a>
+    </p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <a class="brand" href="./" aria-label="YDM Auto Glass home">
+      <img
+        class="brand-logo"
+        alt="YDM Auto Glass logo"
+        decoding="async"
+        src="assets/logo/logo-blue.svg"
+        width="120"
+        height="120"
+      />
+      <span class="brand-name">YDM Auto Glass</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="./">
+        <span class="es">Inicio</span>
+        <span class="en">Home</span>
+      </a>
+      <a href="services.html">
+        <span class="es">Servicios</span>
+        <span class="en">Services</span>
+      </a>
+      <a href="contact.html">
+        <span class="es">Contacto</span>
+        <span class="en">Contact</span>
+      </a>
+    </nav>
+
+    <div aria-label="Language" class="lang-segment" id="langSegment" role="group">
+      <button aria-pressed="false" data-lang="es" type="button">ES</button>
+      <button aria-pressed="false" data-lang="en" type="button">EN</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container center">
+      <h1>404</h1>
+      <p>
+        <span class="en" lang="en">We couldn’t find that page.</span>
+        <span class="es" lang="es">No pudimos encontrar esa página.</span>
+      </p>
+      <p>
+        <a class="btn primary nav-fade" href="./">
+          <span class="en" lang="en">Back to home</span>
+          <span class="es" lang="es">Volver al inicio</span>
+        </a>
+        <a class="btn whats" href="https://wa.me/13462459543" rel="noopener" target="_blank">
+          <span class="en" lang="en">WhatsApp us</span>
+          <span class="es" lang="es">Escríbenos por WhatsApp</span>
+        </a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container cols">
+      <div>
+        <h4>YDM Auto Glass</h4>
+        <p>
+          <span class="es">Hempstead y Greater Houston</span>
+          <span class="en">Hempstead &amp; Greater Houston</span>
+        </p>
+      </div>
+      <div>
+        <h4>
+          <span class="es">Contacto</span>
+          <span class="en">Contact</span>
+        </h4>
+        <p>
+          <a href="tel:+13462459543">346-245-9543</a>
+          &nbsp;·&nbsp;
+          <a href="tel:+19797331769">979-733-1769</a>
+        </p>
+        <p><a href="mailto:ydmautoglass@yahoo.com">ydmautoglass@yahoo.com</a></p>
+        <p><a data-wa="footer-contact" href="https://wa.me/13462459543" rel="noopener" target="_blank">WhatsApp</a></p>
+      </div>
+      <div>
+        <h4>
+          <span class="es">Horario</span>
+          <span class="en">Hours</span>
+        </h4>
+        <p>
+          <span class="es">Lun–Sáb 7:00–7:00</span>
+          <span class="en">Mon–Sat 7:00 AM–7:00 PM</span>
+        </p>
+      </div>
+    </div>
+    <p class="tiny center">© <span id="year"></span> YDM Auto Glass</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/13462459543"
+    class="floating-wa"
+    rel="noopener"
+    target="_blank"
+    aria-label="Contact YDM Auto Glass on WhatsApp"
+    data-wa="floating-404"
+  ></a>
+
+  <!-- Sticky Mobile CTA -->
+  <div aria-hidden="false" class="sticky-cta">
+    <div class="bar">
+      <a class="btn whats" href="https://wa.me/13462459543" rel="noopener" target="_blank" data-wa="sticky-whatsapp-404">
+        <span class="es">WhatsApp</span><span class="en">WhatsApp</span>
+      </a>
+      <a class="btn primary" href="tel:+13462459543">
+        <span class="es">Llamar</span><span class="en">Call</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="main.js?v=1" defer></script>
 </body>
 </html>
